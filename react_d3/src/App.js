@@ -10,7 +10,7 @@ import axios from'axios';
  
 //app.use(cors())
 
-function App(){
+function App(response){
 
   const [characters,setCharacters] = useState([]) 
 
@@ -21,7 +21,7 @@ function App(){
 //  app.use(cors())
   
   useEffect(() => {
-    axios.get('https://age-of-empires-2-api.herokuapp.com/api/v1/units').then(({response}) => {
+    axios.get('https://swapi.dev/api/people/').then((response) => {
       console.log(response.data)
       setCharacters(response.data.results)
     })
