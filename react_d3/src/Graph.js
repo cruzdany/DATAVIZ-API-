@@ -35,7 +35,7 @@ function Graph(props){
             .attr("transform","translate(-10,0)rotate(-45)")
             .style("text-anchor","end")
     
-        const y = d3.scaleLinear().domain([0,500]).range([height,0])   
+        const y = d3.scaleLinear().domain([0,200]).range([height,0])   //The domain([0,200]) can be edited, it is the range of yaxis
         svg.append("g").call(d3.axisLeft(y))   
         
         svg.selectAll("mybar")
@@ -43,14 +43,14 @@ function Graph(props){
             .enter()
             .append('rect')
             .attr("x",(d) => {
-                return x(d.name)
+                return x(d.name)  //Aqui se cambia dependiendo en la api, esta tomando los valores de name, como name son los nombres lol
             })
             .attr("y",(d) => {
-                return y(d.height)
+                return y(d.mass) //Aqui se cambia y toma el valor de height
             })
             .attr("width",x.bandwidth())
             .attr("height", (d) => {
-                return height - y(d.height)
+                return height - y(d.mass) //Aqui se cambia y toma el valor de height
             })
             .attr("fill","#69b3a2")
     
