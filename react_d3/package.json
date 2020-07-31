@@ -2,7 +2,6 @@
   "name": "react_d3",
   "version": "0.1.0",
   "private": true,
-  //"proxy": "https://age-of-empires-2-api.herokuapp.com/api/v1/units",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

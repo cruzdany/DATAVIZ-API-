@@ -21,7 +21,7 @@ function App(response){
 //  app.use(cors())
   
   useEffect(() => {
-    axios.get('https://swapi.dev/api/people/').then((response) => {
+    axios.get('https://swapi.dev/api/vehicles/').then((response) => {
       console.log(response.data)
       setCharacters(response.data.results)
     })
